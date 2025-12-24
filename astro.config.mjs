@@ -58,6 +58,7 @@ export default defineConfig({
 		}),
 		icon({
 			include: {
+				"devicon-plain": ['*'],
 				"preprocess: vitePreprocess(),": ["*"],
 				"fa6-brands": ["*"],
 				"fa6-regular": ["*"],

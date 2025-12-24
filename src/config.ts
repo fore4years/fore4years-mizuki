@@ -263,7 +263,7 @@ export const navBarConfig: NavBarConfig = {
 					name: "LeetCode",
 					url: "https://leetcode.cn/u/mystifying-edisonylf",
 					external: true,
-					icon: "iconfont:icon-leetcode",
+					icon: "devicon-plain:leetcode",
 				},
 			],
 		},
@@ -338,7 +338,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	avatar: "assets/images/avatar.jpg", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
 	name: "Only Stem",
 	bio: "爱吃游戏的冰镇西瓜",
 	typewriter: {
