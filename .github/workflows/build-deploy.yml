@@ -1,0 +1,38 @@
+name: build and deploy.yml
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: Ubuntu 24.04
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: build website
+        run: pnpm build
+
+      - name: copy dist file with scp
+        uses: appleboy/scp-action@v0.0.1
+        with:
+          host: '106.14.24.125'
+          port: 22
+          username: username
+          password: password
+          source: 'dist/'
+          target: remote_target
