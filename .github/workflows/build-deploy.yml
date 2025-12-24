@@ -27,7 +27,7 @@ jobs:
       - name: build website
         run: pnpm build
 
-      - name: copy dist file with scp
+      - name: Copy dist file with scp
         uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.REMOTE_IP }}
