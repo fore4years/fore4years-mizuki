@@ -32,6 +32,9 @@ jobs:
         with:
           run_install: false
 
+      - name: Configure pnpm registry
+        run: pnpm config set registry https://registry.npmmirror.com/
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
