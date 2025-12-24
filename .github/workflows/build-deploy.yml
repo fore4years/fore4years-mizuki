@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: Ubuntu 24.04
+    runs-on: Ubuntu-24.04
 
     steps:
       - uses: actions/checkout@v6
@@ -32,7 +32,7 @@ jobs:
         with:
           host: '106.14.24.125'
           port: 22
-          username: username
-          password: password
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD  }}
           source: 'dist/'
-          target: remote_target
+          target: ${{ secrets.SERVER_TARGET_PATH  }}
