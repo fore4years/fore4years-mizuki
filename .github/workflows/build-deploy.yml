@@ -33,6 +33,6 @@ jobs:
           host: ${{ secrets.REMOTE_IP }}
           port: 22
           username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.SERVER_PASSWORD  }}
           source: 'dist/'
           target: ${{ secrets.SERVER_TARGET_PATH  }}
+          key: ${{ secrets.REMOTE_KEY }}
