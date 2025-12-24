@@ -32,7 +32,7 @@ jobs:
         with:
           host: ${{ secrets.REMOTE_IP }}
           port: 22
-          username: ${{ secrets.SERVER_USERNAME }}
+          username: ${{ secrets.USERNAME }}
           source: 'dist/'
-          target: ${{ secrets.SERVER_TARGET_PATH  }}
+          target: ${{ secrets.REMOTE_TARGET}}
           key: ${{ secrets.REMOTE_KEY }}
