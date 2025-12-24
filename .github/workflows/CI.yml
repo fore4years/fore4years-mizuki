@@ -13,7 +13,6 @@ concurrency:
 
 permissions:
   contents: read
-  actions: write # 新增：用于删除旧缓存
 
 jobs:
   check:
@@ -23,36 +22,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Clean up old cache and residual files
-        run: |
-          rm -rf ~/.pnpm-store
-          rm -rf node_modules pnpm-lock.yaml
-          gh cache delete $(gh cache list | grep pnpm | awk '{print $1}') || true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 20.x
-          cache: 'pnpm'
+          node-version: lts/*
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           run_install: false
-          version: 9.4.0
 
-      - name: Configure pnpm registry (global + package level)
-        run: |
-          pnpm config set registry https://registry.npmmirror.com/
-          pnpm config set @emmetio:registry https://registry.npmmirror.com/
-          pnpm config set detect-libc:registry https://registry.npmmirror.com/
-          pnpm config set encoding:registry https://registry.npmmirror.com/
-          pnpm config get registry
+      - name: Configure pnpm registry
+        run: pnpm config set registry https://registry.npmmirror.com
 
-      - name: Install dependencies with force registry
-        run: pnpm install --frozen-lockfile --registry https://registry.npmmirror.com/ --no-cache
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Run Astro Check
         run: pnpm astro check
@@ -66,36 +50,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Clean up old cache and residual files
-        run: |
-          rm -rf ~/.pnpm-store
-          rm -rf node_modules pnpm-lock.yaml
-          gh cache delete $(gh cache list | grep pnpm | awk '{print $1}') || true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 20.x
-          cache: 'pnpm'
+          node-version: lts/*
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
           run_install: false
-          version: 9.4.0
 
-      - name: Configure pnpm registry (global + package level)
-        run: |
-          pnpm config set registry https://registry.npmmirror.com/
-          pnpm config set @emmetio:registry https://registry.npmmirror.com/
-          pnpm config set detect-libc:registry https://registry.npmmirror.com/
-          pnpm config set encoding:registry https://registry.npmmirror.com/
-          pnpm config get registry
-
-      - name: Install dependencies with force registry
-        run: pnpm install --frozen-lockfile --registry https://registry.npmmirror.com/ --no-cache
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
       - name: Run Astro Build
         run: pnpm astro build
