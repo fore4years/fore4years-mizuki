@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
 	title: "OnlyStem的个人空间",
 	subtitle: "你好",
 	siteURL: "https://onlystem.xyz/", // 请替换为你的站点URL，以斜杠结尾
-	siteStartDate: "2025-01-01", // 站点开始运行日期，用于站点统计组件计算运行天数
+	siteStartDate: "2025-12-30", // 站点开始运行日期，用于站点统计组件计算运行天数
 
 	timeZone: SITE_TIMEZONE,
 
@@ -436,7 +436,9 @@ export const musicPlayerConfig: MusicPlayerConfig = {
 
 export const footerConfig: FooterConfig = {
 	enable: true, // 是否启用Footer HTML注入功能
-	customHtml: "蜀ICP备2025177764号", // HTML格式的自定义页脚信息，例如备案号等，默认留空
+	customHtml: "蜀ICP备2025177764号 | \t\n" +
+		"\n" +
+		"川公网安备51011402000992号", // HTML格式的自定义页脚信息，例如备案号等，默认留空
 	// 也可以直接编辑 FooterConfig.html 文件来添加备案号等自定义内容
 	// 注意：若 customHtml 不为空，则使用 customHtml 中的内容；若 customHtml 留空，则使用 FooterConfig.html 文件中的内容
 	// FooterConfig.html 可能会在未来的某个版本弃用
