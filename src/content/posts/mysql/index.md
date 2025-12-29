@@ -5,7 +5,7 @@ date: 2025-6-28
 description: "mysql相关常用知识"
 tags: ["数据库", "Mysql", "基础"]
 category: 学习
-draft: true
+draft: false
 ---
 ## 关于数据的基本概念
 * **数据库**: 就是数据的集合, 由数据库管理系统管理
