@@ -249,7 +249,7 @@ export const navBarConfig: NavBarConfig = {
 			children: [
 				{
 					name: "GitHub",
-					url: "https://github.com/matsuzaka-yuki/Mizuki",
+					url: "https://github.com/fore4years/fore4years-mizuki.git",
 					external: true,
 					icon: "fa6-brands:github",
 				},
