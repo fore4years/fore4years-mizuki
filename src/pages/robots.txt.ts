@@ -6,7 +6,7 @@ Disallow: /
 Allow: /$
 Allow: /posts/
 
-Sitemap: ${new URL("sitemap-index.xml", import.meta.env.SITE).href}
+Sitemap: ${new URL("sitemap-index.md.xml", import.meta.env.SITE).href}
 `.trim();
 
 export const GET: APIRoute = () => {

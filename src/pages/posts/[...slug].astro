@@ -295,8 +295,8 @@ const jsonLd = {
 
     {siteConfig.showLastModified && (
         <>
-            <div 
-                id="last-modified" 
+            <div
+                id="last-modified"
                 data-last-modified={lastModified}
                 data-prefix={i18n(I18nKey.lastModifiedPrefix)}
                 data-year={i18n(I18nKey.year)}
@@ -335,7 +335,7 @@ const jsonLd = {
                         const secondKey = lastModifiedElement.dataset.second;
 
                         let runtimeString = prefix + ' ';
-                        
+
                         if (years > 0) {
                             runtimeString += `${years} ${yearKey} `;
                         }
@@ -368,7 +368,7 @@ const jsonLd = {
                             class="text-3xl text-[var(--primary)]"
                         />
                     </div>
-                   
+
                     <div class="flex flex-col gap-1">
                         <div id="modifiedtime" class="text-[1.0rem] leading-tight text-black/75 dark:text-white/75"></div>
                         <p class="text-[0.8rem] leading-tight text-black/75 dark:text-white/75">

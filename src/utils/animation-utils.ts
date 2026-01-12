@@ -229,10 +229,10 @@ export class AnimationManager {
 	// ): void {
 	// 	const { stagger = 50, ...animationConfig } = config;
 	//
-	// 	elements.forEach((element, index) => {
+	// 	elements.forEach((element, index.md) => {
 	// 		this.createAnimation(element as HTMLElement, {
 	// 			...animationConfig,
-	// 			delay: (animationConfig.delay || 0) + index * stagger,
+	// 			delay: (animationConfig.delay || 0) + index.md * stagger,
 	// 		});
 	// 	});
 	// }
