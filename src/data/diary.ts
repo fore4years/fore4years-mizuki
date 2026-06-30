@@ -15,10 +15,9 @@ export interface DiaryItem {
 const diaryData: DiaryItem[] = [
 	{
 		id: 1,
-		content:
-			"The falling speed of cherry blossoms is five centimeters per second!",
-		date: "2025-01-15T10:30:00Z",
-		images: ["/images/diary/sakura.jpg", "/images/diary/1.jpg"],
+		content: "今天读完了《认知觉醒》，打算开始每日反思。一开始并不认为一定要通过写每日反思来告诉自己哪些需要提升，因为每天无非就两点需要反思，但是其中" +
+			"说到如果未来有一天可能会遗忘现在的积累的行动点和认知点，那么通过日记就会拾起。我认为这一点足够让我做出现在的决定。",
+		date: "2026-06-30T11:55:00Z",
 	},
 ];
 
