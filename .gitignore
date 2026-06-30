@@ -43,3 +43,5 @@ src/data/myself.ts
 src/pages/myself.astro
 
 *.md
+
+src/content/posts/.obsidian/
