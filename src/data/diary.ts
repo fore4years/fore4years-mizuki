@@ -18,8 +18,13 @@ const diaryData: DiaryItem[] = [
 		content:
 			"今天读完了《认知觉醒》，决定开始反思。之所以会有这个决定，是因为有一点说动我了：未来可能会有一天遗忘掉如今反思出来的，需要改变的点",
 		date: "2026-06-30T14:49:00Z",
-		images: ["/images/diary/sakura.jpg", "/images/diary/1.webp"],
+		// images: ["/images/diary/sakura.jpg", "/images/diary/1.webp"],
 	},
+	{
+		id: 2,
+		content: "本来说是每天反思，昨天就给忘了。。。。，今天续上：1.首先就是要把反思习惯练出来；2.这两天对于手机的控制又要回去了，得注意了；3.冥想也要排上日程。",
+		date: "2026-06-30T14:49:00Z",
+	}
 ];
 
 // 获取日记列表（按时间倒序）
